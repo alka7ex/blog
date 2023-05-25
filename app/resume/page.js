@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import { Container } from 'postcss'
+import Head from 'next/head'
+
+export const metadata = {
+  title: "Resume",
+  description: "This is farhienza haikal resume that to be share with the world",
+};
+
 export default function blog() {
   return (
     <div className='bg-base-200'>
@@ -8,7 +15,7 @@ export default function blog() {
           <img src="1682770822163.jpg" className="max-w-sm rounded-2xl h-72 md:h-96 w-max object-contain shadow-2xl" />
           <div className=''>
             <h1 className="text-5xl font-bold text-center md:text-left">Box Office News!</h1>
-            <p className="py-6 text-center md:text-left">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p className="py-6 text-center md:text-left">Provident cupiditate safdin. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
           </div>
         </div>
       </div>
