@@ -18,11 +18,11 @@ export default function blog() {
         <div className=''>
           <div className='flex min-h-full m-auto'>
             <div className='max-w-full p-5 m-auto'>
-              <div className='flex flex-row text-xs'>
+              <div className='flex flex-row text-xs my-4'>
                 Tag 1
                 Tag 2
               </div>
-              <h2 className='text-xl truncate'>
+              <h2 className='text-2xl truncate my-4'>
                 Amet enim esse ex Lorem commodo commodo voluptate est ipsum ipsum pariatur enim aliqua enim.
               </h2>
               <div className='flex flex-col textarea-bordered'>
@@ -36,7 +36,7 @@ export default function blog() {
                   </h5>
                 </div>
               </div>
-              <div className='container flex justify-end w-auto m-2'>
+              <div className='container flex justify-end w-auto mx-2 my-8'>
                 <button className='relative btn btn-sm sm:btn-sm md:btn-md lg:btn-lg w-28'>Read More</button>
               </div>
             </div>
