@@ -4,8 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    "./*.html", "./ecommerce/*.html", "./assets/**/*.js",
-    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {
@@ -16,8 +14,26 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("flowbite/plugin")
-  ],
-}
 
+  plugins: [
+    require("daisyui"),
+    require('@tailwindcss/typography')
+  ],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          "primary": "#d1d5db",
+          "secondary": "#6b7280",
+          "accent": "#4b5563",
+          "neutral": "#242733",
+          "base-100": "#111827",
+          "info": "#86A6F9",
+          "success": "#58DAC5",
+          "warning": "#fbbf24",
+          "error": "#F36267",
+        },
+      },
+    ],
+  },
+}
