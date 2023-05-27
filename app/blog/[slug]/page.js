@@ -7,7 +7,7 @@ export const metadata = {
   description: "This is farhienza haikal resume that to be share with the world",
 };
 
-export default function blog({ slug: workexperience }) {
+export default function blog({ slug: sdfa }) {
   return (
     <div className=''>
       <div className="container flex flex-cols mt-8 mb-12 mx-8 xl:pl-24">
