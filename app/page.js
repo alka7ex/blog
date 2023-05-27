@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Container } from 'postcss'
 export default function blog() {
   return (
-    <div className='flex flex-col w-auto mx-0 mt-5 space-y-5 bg-base-200'>
+    <div className='flex flex-col w-auto mx-0 mt-5 space-y-5'>
       <div className="container grid w-auto h-auto grid-cols-1 p-5 mx-auto space-y-5 md:grid-cols-2 md:space-y-0 md:space-x-5 ">
         <div className='flex min-h-full m-auto rounded-lg'>
           <div className='m-auto'>
@@ -43,7 +43,7 @@ export default function blog() {
           </div>
         </div>
       </div>
-      <div className='container h-auto p-5 mx-auto bg-base-200 rounded-md '>
+      <div className='container h-auto p-5 mx-auto rounded-md '>
         <div className='container grid grid-cols-1 mx-auto space-y-5 md:grid-cols-3 md:space-y-0 md:space-x-5'>
           <div className="mx-auto max-w-sm bg-slate-800  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">

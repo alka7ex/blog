@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function blog() {
   return (
-    <div className='bg-base-200'>
-      <div className="hero min-h-screen bg-base-200">
+    <div className=''>
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col md:flex-row-reverse">
           <img src="1682770822163.jpg" className="max-w-sm rounded-2xl h-72 md:h-96 w-max object-contain shadow-2xl" />
           <div className=''>
@@ -20,7 +20,7 @@ export default function blog() {
         </div>
       </div>
       <div>
-        <div className="container px-4 pb-16 bg-base-200 xl:pl-24">
+        <div className="container px-4 pb-16 xl:pl-24">
           <h2 className='my-4 text-2xl font-bold'>
             Work Experience
           </h2>
