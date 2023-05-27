@@ -1,7 +1,7 @@
 import React from 'react'
 export const Navbar = () => {
   return (
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
