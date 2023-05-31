@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export async function fetchBlog(slug) {
   const res = await fetch(
     process.env.NEXT_PUBLIC_STRAPI_URL +
@@ -16,10 +18,13 @@ const Blog = async ({ slug }) => {
     <div className="">
       <div className="container flex flex-cols mt-8 mb-12 mx-8 xl:pl-24">
         <div className="avatar">
-          <div className="w-24 rounded-full">
-            <img
+          <div className="w-24 h-24 my-auto rounded-full">
+            <Image
               src="/1682770822163.jpg"
-              className="max-w-sm rounded-full shadow-2xl"
+              width={500}
+              height={500}
+              // className="max-w-sm shadow-2xl"
+              alt="Farhienza Haikal"
             />
           </div>
         </div>
@@ -34,7 +39,7 @@ const Blog = async ({ slug }) => {
         </div>
       </div>
       <div>
-        <div className="container px-4 pb-16 xl:pl-24 mx-4">
+        <div className="container px-4 pb-16 mx-4">
           <img
             src={
               process.env.NEXT_PUBLIC_STRAPI_URL +
@@ -42,15 +47,17 @@ const Blog = async ({ slug }) => {
             }
             width={549}
             height={309}
-            alt="Picture of the author"
-            className="rounded-2xl"
+            alt={jsonData.data[0].attributes.altthumbnail}
+            className="rounded-2xl mx-auto"
           />
-          <h1 className="my-8 text-4xl font-bold">
+          <h1 className="my-8 text-2xl font-bold prose">
             {jsonData.data[0].attributes.title}
           </h1>
-          <p className="mx-auto md:text-xl">
-            {jsonData.data[0].attributes.content}
-          </p>
+          <div>
+            <p className="mx-4 prose">
+              {jsonData.data[0].attributes.content}
+            </p>
+          </div>
         </div>
       </div>
     </div>
