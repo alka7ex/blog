@@ -6,28 +6,12 @@ export async function fetchBlog(slug) {
 }
 
 
-export async function generateMetadata(slug){
-  const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL + "/api/posts?populate=*&filters[slug][$eq]="+(slug));
-  const data = await res.json();
-  const meta = data;
-  console.log(meta);
-    return {
-      title: meta.data[0].attributes.title
-    };
-}
-
-
-
 
 const Blog = async ({slug}) => {
     const jsonData  = await fetchBlog(slug);
-    const meta_data = await generateMetadata(slug);
     // console.log(meta_data);
     return (
       <div className="">
-        <h1>
-        {meta_data.title}
-        </h1>
       <div className="container flex flex-cols mt-8 mb-12 mx-8 xl:pl-24">
         <div className="avatar">
           <div className="w-24 rounded-full">

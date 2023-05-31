@@ -5,10 +5,13 @@ import { Footer } from '../components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const revalidate = 0
+
 export const metadata = {
   title: 'Haikal Blog',
   description: 'Blog created by haikal to share his knowledge with the world',
 }
+
 
 export default function RootLayout({ children }) {
   return (
