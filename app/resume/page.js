@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Container } from "postcss";
-import Head from "next/head";
+
 
 export const metadata = {
   title: "Resume",

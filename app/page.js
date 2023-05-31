@@ -1,7 +1,3 @@
-import { data } from "autoprefixer";
-import Image from "next/image";
-import { Container } from "postcss";
-
 export async function mutliApi() {
   const [blogRes, featuredRes] = await Promise.all([
     fetch(
@@ -31,21 +27,29 @@ export default async function blog({ blogdata, featureddata }) {
       <div className="container grid w-auto h-auto grid-cols-1 p-5 mx-auto space-y-5 md:grid-cols-2 md:space-y-0 md:space-x-5 ">
         <div className="flex min-h-full m-auto rounded-2xl">
           <div className="m-auto">
-             <img
-              src={process.env.NEXT_PUBLIC_STRAPI_URL + featureds.featureddata.data[0].attributes.thumbnail.data[0].attributes.formats.thumbnail.url}
+            <img
+              src={
+                process.env.NEXT_PUBLIC_STRAPI_URL +
+                featureds.featureddata.data[0].attributes.thumbnail.data[0]
+                  .attributes.formats.thumbnail.url
+              }
               width={549}
               height={309}
               alt="Picture of the author"
-              className='rounded-2xl'
+              className="rounded-2xl"
             />
           </div>
         </div>
         <div className="">
           <div className="flex min-h-full m-auto">
             <div className="max-w-full p-5 m-auto">
-              <h2 className="text-2xl truncate my-4">
-                {featureds.featureddata.data[0].attributes.title}
-              </h2>
+              <a
+                href={"/blog/" + featureds.featureddata.data[0].attributes.slug}
+              >
+                <h2 className="text-2xl truncate my-4">
+                  {featureds.featureddata.data[0].attributes.title}
+                </h2>
+              </a>
               <div className="flex flex-col textarea-bordered">
                 <div className="container h-24 overflow-hidden md:h-32 lg:h-56">
                   <h5 className="textarea-bordered text-clip ">
@@ -54,9 +58,15 @@ export default async function blog({ blogdata, featureddata }) {
                 </div>
               </div>
               <div className="container flex justify-end w-auto mx-2 my-8">
-                <button className="relative btn btn-sm sm:btn-sm md:btn-md lg:btn-lg w-28">
-                  Read More
-                </button>
+                <a
+                  href={
+                    "/blog/" + featureds.featureddata.data[0].attributes.slug
+                  }
+                >
+                  <button className="relative btn btn-sm sm:btn-sm md:btn-md lg:btn-lg w-28">
+                    Read More
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -66,7 +76,7 @@ export default async function blog({ blogdata, featureddata }) {
         <div className="container grid grid-cols-1 mx-auto space-y-5 lg:grid-cols-3 lg:space-y-0">
           {featureds.blogdata.data.slice(0, 3).map((data) => (
             <div className="card w-3/4 md:w-3/5 lg:w-4/5 2xl:w-5/6 bg-slate-800 shadow-xl mx-auto">
-              <a href={data.attributes.slug}>
+              <a href={"/blog/" + data.attributes.slug}>
                 <figure className="">
                   <img
                     className="h-48 w-full object-cover rounded-t-2xl"
@@ -80,7 +90,7 @@ export default async function blog({ blogdata, featureddata }) {
                 </figure>
               </a>
               <div className="card-body">
-                <a href={data.attributes.slug}>
+                <a href={"/blog/" + data.attributes.slug}>
                   <h2 className="card-title truncate">
                     {data.attributes.title}
                   </h2>
@@ -88,11 +98,11 @@ export default async function blog({ blogdata, featureddata }) {
                 <p className="h-24 overflow-hidden">
                   {data.attributes.content}
                 </p>
-                <a href={data.attributes.slug}>
+                <a href={"/blog/" + data.attributes.slug}>
                   <div className="card-actions justify-end">
                     <button
                       className="btn btn-primary"
-                      href={data.attributes.slug}
+                      href={"/blog/" + data.attributes.slug}
                     >
                       Read More
                     </button>
