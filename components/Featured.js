@@ -1,4 +1,3 @@
-import React from 'react'
 export async function blogpostData() {
     const res = await fetch(process.env.APIURL + '/api/posts?populate=*&filters[featured][$eq]=true');
     const jsonData = res.json();
