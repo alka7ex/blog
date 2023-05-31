@@ -14,9 +14,6 @@ export async function generateMetadata({params: {slug}}){
     };
 }
 
-
-
-
 const blog = ({params: {slug}}) => {
   return (
     <>

@@ -1,17 +1,19 @@
 export async function fetchBlog(slug) {
-  const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL + "/api/posts?populate=*&filters[slug][$eq]="+(slug));
-  const jsonData =  await res.json();
+  const res = await fetch(
+    process.env.NEXT_PUBLIC_STRAPI_URL +
+      "/api/posts?populate=*&filters[slug][$eq]=" +
+      slug
+  );
+  const jsonData = await res.json();
   // console.log(JSON.stringify(jsonData))
   return jsonData;
 }
 
-
-
-const Blog = async ({slug}) => {
-    const jsonData  = await fetchBlog(slug);
-    // console.log(meta_data);
-    return (
-      <div className="">
+const Blog = async ({ slug }) => {
+  const jsonData = await fetchBlog(slug);
+  // console.log(meta_data);
+  return (
+    <div className="">
       <div className="container flex flex-cols mt-8 mb-12 mx-8 xl:pl-24">
         <div className="avatar">
           <div className="w-24 rounded-full">
@@ -34,7 +36,10 @@ const Blog = async ({slug}) => {
       <div>
         <div className="container px-4 pb-16 xl:pl-24 mx-4">
           <img
-            src={process.env.NEXT_PUBLIC_STRAPI_URL + jsonData.data[0].attributes.thumbnail.data[0].attributes.url}
+            src={
+              process.env.NEXT_PUBLIC_STRAPI_URL +
+              jsonData.data[0].attributes.thumbnail.data[0].attributes.url
+            }
             width={549}
             height={309}
             alt="Picture of the author"
@@ -49,8 +54,7 @@ const Blog = async ({slug}) => {
         </div>
       </div>
     </div>
-    )
-}
+  );
+};
 
-export default Blog
-
+export default Blog;
