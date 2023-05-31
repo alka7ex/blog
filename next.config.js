@@ -8,9 +8,9 @@ module.exports = {
       formats: ['image/webp'],
       remotePatterns: [
         {
-          protocol: 'http',
+          protocol: 'https',
           hostname: 'strapi.farhienza-haikal.my.id',
-          port: '',
+          port: '443',
           pathname: '/upload/**',
         },
       ],
