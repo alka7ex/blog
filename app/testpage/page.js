@@ -1,7 +1,3 @@
-import Image from 'next/image'
-import { Container } from 'postcss'
-import Featured from '@/components/Featured'
-import BlogList from '@/components/BlogList'
 import HeaderResume from'@/components/resume/Header'
 import BodyResume from'@/components/resume/Body'
 
