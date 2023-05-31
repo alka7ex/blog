@@ -10,26 +10,13 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
-    "contentlayer": "^0.3.3",
     "daisyui": "^2.51.6",
-    "date-fns": "^2.30.0",
-    "flowbite": "^1.6.5",
-    "flowbite-react": "^0.4.4",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.1",
     "markdown-to-jsx": "^7.2.0",
-    "marked": "^5.0.4",
     "next": "13.4.2",
-    "next-contentlayer": "^0.3.3",
     "postcss": "8.4.23",
-    "preline": "^1.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "^8.0.7",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2",
-    "tailgrids": "^2.0.1",
-    "untruncate-json": "^0.0.1"
+    "tailgrids": "^2.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
