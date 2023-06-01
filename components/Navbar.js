@@ -1,12 +1,15 @@
+import Link from "next/link"
+
+
 export const Navbar = () => {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl" href='/'>Haikal</a>
+          <Link href='/' className="btn btn-ghost normal-case text-xl">Haikal</Link>
         </div>
         <div className="navbar-end">
-          <a className="btn mr-4" href='/resume'>Resume</a>
+          <Link href='/resume' className="btn mr-4">Resume</Link>
         </div>
       </div>
     </nav>

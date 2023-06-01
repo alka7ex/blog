@@ -6,6 +6,7 @@ const nextConfig = {}
 module.exports = {
     images: {
       formats: ['image/webp'],
+      domains: ['strapi.farhienza-haikal.my.id'],
       remotePatterns: [
         {
           protocol: 'https',
