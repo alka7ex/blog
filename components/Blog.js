@@ -39,7 +39,7 @@ const Blog = async ({ slug }) => {
         </div>
       </div>
       <div>
-        <div className="container px-4 pb-16 mx-4">
+        <div className="container px-4 pb-16 mx-auto">
           <img
             src={
               process.env.NEXT_PUBLIC_STRAPI_URL +
@@ -50,13 +50,34 @@ const Blog = async ({ slug }) => {
             alt={jsonData.data[0].attributes.altthumbnail}
             className="rounded-2xl mx-auto"
           />
-          <h1 className="my-8 text-2xl font-bold prose">
-            {jsonData.data[0].attributes.title}
-          </h1>
-          <div>
-            <p className="mx-4 prose">
-              {jsonData.data[0].attributes.content}
-            </p>
+          <div className="mx-auto">
+            <h1 className="my-8 text-2xl font-bold prose">
+              {jsonData.data[0].attributes.title}
+            </h1>
+            <div className="container prose max-w-none">
+              {/* {jsonData.data[0].attributes.content} */}
+              Pariatur Lorem quis amet ipsum id. Quis culpa fugiat mollit ad
+              commodo ad reprehenderit labore ea consequat esse exercitation.
+              Exercitation Lorem occaecat proident reprehenderit eiusmod
+              adipisicing consequat incididunt id adipisicing dolor dolor
+              commodo Lorem. Ullamco aliquip sint ex nisi do enim sint minim et.
+              Sit in ullamco aliqua pariatur nisi aliquip sunt excepteur. Culpa
+              ad magna reprehenderit ut officia sunt voluptate Lorem. Fugiat id
+              culpa laborum laborum in proident dolor amet culpa incididunt qui
+              commodo aliquip reprehenderit. Et Lorem adipisicing veniam veniam
+              enim proident aliqua adipisicing eu. Consectetur laborum nulla
+              occaecat id aliquip cupidatat nisi. Cillum sunt aliqua nostrud
+              commodo et. Veniam duis irure incididunt do cillum qui. Culpa
+              pariatur est do tempor consectetur sit id cillum aliqua magna.
+              Aute dolor qui laborum aliquip. Ex consectetur sint in fugiat.
+              Deserunt enim officia quis tempor aliqua consectetur. Aliquip
+              commodo veniam duis commodo culpa velit. Ex cupidatat dolor id
+              exercitation non eiusmod magna deserunt laboris amet aute
+              reprehenderit laboris. Labore deserunt amet nisi proident ipsum
+              reprehenderit commodo. Aute incididunt anim nulla ullamco qui sunt
+              sit ad amet laboris proident minim. Eiusmod labore laboris qui
+              minim ex aute sint reprehenderit culpa eu.
+            </div>
           </div>
         </div>
       </div>
