@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export async function fetchHeader() {
   const res = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL + "/api/resumes");
   const jsonData = await res.json();
@@ -5,16 +7,19 @@ export async function fetchHeader() {
   return jsonData;
 }
 
-const HeaderResume = async ({jsonData}) => {
+const HeaderResume = async ({ jsonData }) => {
   const resumedatas = await fetchHeader();
   // console.log(meta_data);
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col md:flex-row-reverse ">
-        <img
-          src="1682770822163.jpg"
+        <Image
+          src="/1682770822163.jpg"
+          width={500}
+          height={500}
+          // className="max-w-sm shadow-2xl"
+          alt="Farhienza Haikal"
           className="max-w-sm rounded-2xl h-72 md:h-96 w-max object-contain shadow-2xl"
-          alt="Farhienza"
         />
         <div className="mx-auto md:mx-12 lg:mx-16">
           <h1 className="text-5xl font-bold text-center md:text-left">

@@ -10,6 +10,14 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Haikal Blog',
   description: 'Blog created by haikal to share his knowledge with the world',
+  metadataBase: new URL('https://farhienza-haikal.my.id'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'id-ID': '/id-ID',
+    },
+  },
 }
 
 
