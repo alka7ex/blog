@@ -13,25 +13,25 @@ const BodyResume = async ({ jsonData }) => {
   return (
     <div className="container px-4 pb-16">
       <h2 className="my-4 text-2xl font-bold">Work Experience</h2>
-      <p className="prose">
+      <div className="prose max-w-none">
         <Markdown>{resumedatas.data[0].attributes.experience}</Markdown>
-      </p>
+      </div>
       <h2 className="my-4 text-2xl font-bold">Skills</h2>
-      <p className="prose">
+      <div className="prose max-w-none">
         <Markdown>{resumedatas.data[0].attributes.skills}</Markdown>
-      </p>
+      </div>
       <h2 className="my-4 text-2xl font-bold">Tools</h2>
-      <p className="prose">
+      <div className="prose max-w-none">
         <Markdown>{resumedatas.data[0].attributes.tools}</Markdown>
-      </p>
+      </div>
       <h2 className="my-4 text-2xl font-bold">Education</h2>
-      <p className="prose">
+      <div className="prose max-w-none">
         <Markdown>{resumedatas.data[0].attributes.education}</Markdown>
-      </p>
+      </div>
       <h2 className="my-4 text-2xl font-bold">Course</h2>
-      <p className="prose">
+      <div className="prose max-w-none">
         <Markdown>{resumedatas.data[0].attributes.course}</Markdown>
-      </p>
+      </div>
     </div>
   );
 };
